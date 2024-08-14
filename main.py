@@ -3,11 +3,12 @@ from bs4 import BeautifulSoup
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from pprint import pprint
+import os
 
-SPOTIPY_CLIENT_ID = "e8a035016a614ae5a593d40d45351590"
-SPOTIPY_CLIENT_SECRET = "06a7f4e36f5048338731968fdffbea07"
+SPOTIPY_CLIENT_ID = os.environ.get("SPOTIPY_CLIENT_ID")
+SPOTIPY_CLIENT_SECRET = os.environ.get("SPOTIPY_CLIENT_SECRET")
 SPOTIPY_REDIRECT_URI = "https://example.com/"
-ACCESS_TOKEN = "BQDcgCs0WMx5-HFz6FVti4R6ZG3ujKsFm6Ev0nFC3thp3HG6yjRfhzs5vHyg5OfY6fqqW2xhU-PLcqGSDDX-sCYLdmm1rj7Y7ca5hhZ3TDUNlbKRTO5xJE98RIuV5GebogZCYZpyKHNEGCKI0HheC7BWLVWLRqzVMhtTr3V3goEFt8W6vbcHnJhVeUMxFNy2LypHbZMn1SpH_aaZqpE"
+ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 
 time_frame = input("Which year would you like to travel to? Input in YYYY-MM-DD: ")
 
